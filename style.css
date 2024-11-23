@@ -6,6 +6,7 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
+    position: relative; /* Needed for absolute positioning of arrows */
 }
 
 .content-div {
@@ -14,28 +15,25 @@ body {
     margin-bottom: 15px;
     background-color: #f9f9f9;
     border-radius: 5px;
-    /* Initial border */
-    border: 1px dashed transparent;
-    transition: border-color 0.3s, filter 0.3s; /* Transition properties */
+    border: 1px dashed transparent; /* Initial border */
+    transition: border-color 0.3s; /* Transition for border color */
 }
 
 .content-div:hover {
     border-color: blue; /* Border color change */
-    filter: blur(1px); /* Slight blur on hover */
 }
 
 .arrow {
-    display: inline-block; /* Align horizontally */
-    padding: 10px 15px; /* Button-like padding */
-    margin: 0 5px; /* Spacing between arrows */
-    background-color: #007bff; /* Bootstrap primary color */
-    color: white;
-    border: none;
+    position: absolute; /* Position arrows absolutely */
+    display: none; /* Initially hidden */
+    background-color: #007bff; /* Button color */
+    color: white; 
+    padding: 8px 12px; /* Button-like padding */
     border-radius: 5px;
-    font-size: 18px; /* Larger font size */
-    text-align: center;
+    font-size: 16px; /* Font size for arrows */
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth background transition */
+    z-index: 1001; /* Ensure they are above other content */
+    transition: background-color 0.3s; /* Hover effect for arrows */
 }
 
 .arrow:hover {
@@ -49,10 +47,24 @@ body {
     background-color: #28a745; /* Green */
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 20px 40px; /* Increased padding for a larger button */
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 24px; /* Larger font size */
     display: none; /* Initially hidden */
     cursor: pointer;
     z-index: 1000; /* Ensure it floats above other content */
+    animation: pulse 2s infinite; /* Pulsating animation */
+}
+
+/* Pulsing animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Scale up */
+    }
+    100% {
+        transform: scale(1);
+    }
 }
