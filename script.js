@@ -4,6 +4,8 @@ $(document).ready(function() {
 
     // Append arrows to each content div and set up functionality
     $('.content-div').each(function() {
+        addArrowButtons($(this)); // Call function to add arrows
+
         // Up Arrow functionality
         $(this).find('.up-arrow').on('click', function() {
             var currentDiv = $(this).closest('.content-div');
@@ -32,7 +34,6 @@ $(document).ready(function() {
 
     // Save Button Click Event
     $saveButton.on('click', function() {
-        // Future API call can be added here to save the new structure
         updateServerData(); // Call placeholder function
         
         // Hide the Save button after saving
@@ -41,16 +42,14 @@ $(document).ready(function() {
 
     // Placeholder for an API function
     function updateServerData() {
-        // Logic to update data on the server
-        // e.g., $.post('/api/update', {data: getDivData()});
         console.log('Data has been saved! (Placeholder for actual server call)');
     }
 
-    // Placeholder function to gather data from divs
-    function getDivData() {
-        // Return some data from the divs if needed for an API call.
-        return $('.content-div').map(function() {
-            return $(this).find('h2, h3, p').map((_, el) => $(el).text()).get().join(" | "); // Example: return combined text of title and paragraph
-        }).get();
+    // Function to add arrow buttons dynamically
+    function addArrowButtons($div) {
+        $div.prepend(`
+            <span class="arrow up-arrow">&#8593;</span>
+            <span class="arrow down-arrow">&#8595;</span>
+        `);
     }
 });
