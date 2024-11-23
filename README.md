@@ -66,4 +66,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-For any inquiries, please contact [Your Name](mailto:your.email@example.com).
+For any inquiries, please contact [Mayur](https://mayur.ca/x).
