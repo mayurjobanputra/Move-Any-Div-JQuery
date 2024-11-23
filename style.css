@@ -25,16 +25,21 @@ body {
 }
 
 .arrow {
-    display: none; /* Initially hidden */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); /* Center the arrows */
+    display: inline-block; /* Align horizontally */
+    padding: 10px 15px; /* Button-like padding */
+    margin: 0 5px; /* Spacing between arrows */
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Larger font size */
+    text-align: center;
     cursor: pointer;
-    margin-bottom: 5px; /* Space between arrows and div */
+    transition: background-color 0.3s; /* Smooth background transition */
 }
 
-.content-div:hover .arrow {
-    display: block; /* Show arrows on hover */
+.arrow:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 #saveButton {
