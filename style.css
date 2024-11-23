@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.content-div {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    /* Initial border */
+    border: 1px dashed transparent;
+    transition: border-color 0.3s, filter 0.3s; /* Transition properties */
+}
+
+.content-div:hover {
+    border-color: blue; /* Border color change */
+    filter: blur(1px); /* Slight blur on hover */
+}
+
+.arrow {
+    display: none; /* Initially hidden */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the arrows */
+    cursor: pointer;
+    margin-bottom: 5px; /* Space between arrows and div */
+}
+
+.content-div:hover .arrow {
+    display: block; /* Show arrows on hover */
+}
+
+#saveButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none; /* Initially hidden */
+    cursor: pointer;
+    z-index: 1000; /* Ensure it floats above other content */
+}
