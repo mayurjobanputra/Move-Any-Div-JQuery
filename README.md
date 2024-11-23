@@ -2,6 +2,8 @@
 
 A simple web interface that lets users rearrange `<div>` elements on a page by clicking up/down arrows. A "Save" button appears when elements are moved, allowing for future persistence of the rearranged layout via API calls.
 
+https://github.com/user-attachments/assets/385aeb7e-bc64-4d59-875e-bcf99d776003
+
 ## Features
 
 - Move `<div>` elements up and down within the parent container.
